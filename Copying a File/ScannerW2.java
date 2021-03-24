@@ -14,11 +14,13 @@ public class ScannerW2
   {
     System.out.println("Your File Destination :");
     Scanner scan = new Scanner(System.in);
+    
     String str = scan.nextLine();
-    File file =
-      new File(str);
+    
+    File file =new File(str);
+    
     Scanner sc = new Scanner(file);
-  
+
     while (sc.hasNextLine())
       System.out.println(sc.nextLine());
   }
