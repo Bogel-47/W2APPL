@@ -37,10 +37,12 @@ heading.setFont (new Font("Helvetica", Font.BOLD, 30));
 JLabel inputLabel = new JLabel ("Enter a number: ");
 number = new JTextField (8);
 computeButton = new JButton ("Click to see all primes up to your number!");
-
 primeList = new JTextArea (10, 30);
-scrollprime = new JScrollPane (primeList); 
+scrollprime = new JScrollPane (primeList);
+
 computeButton.addActionListener(new ButtonListener());
+
+
 // Add the components to the panel
 add (heading);
 add (inputLabel);
@@ -59,8 +61,10 @@ public class ButtonListener implements ActionListener
 // Generates and displays a list of primes when the
 // button is clicked.
 // -----------------------------------------------------------
+ 
 public void actionPerformed (ActionEvent event)
 {
+try{
 String textNum = number.getText();
 int num = Integer.parseInt (textNum);
 String ans = "";
@@ -93,4 +97,8 @@ ans += "\n";
 }
 }
 primeList.setText (ans);
+}
+catch(NumberFormatException ex){
+    primeList.setText("Not an Integer");
+}
 }
