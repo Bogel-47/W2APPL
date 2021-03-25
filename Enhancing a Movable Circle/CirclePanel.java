@@ -98,13 +98,11 @@ this.dy = dy;
 public void actionPerformed(ActionEvent e)
 {
 x += dx;
-
 y += dy;
 left.setEnabled(x>0);
 right.setEnabled(x<330);
 up.setEnabled(y>0);
 down.setEnabled(y<130);
-
 repaint();
 }
 }
