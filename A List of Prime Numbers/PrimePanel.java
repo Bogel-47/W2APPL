@@ -37,6 +37,7 @@ heading.setFont (new Font("Helvetica", Font.BOLD, 30));
 JLabel inputLabel = new JLabel ("Enter a number: ");
 number = new JTextField (8);
 computeButton = new JButton ("Click to see all primes up to your number!");
+
 primeList = new JTextArea (10, 30);
 scrollprime = new JScrollPane (primeList); 
 computeButton.addActionListener(new ButtonListener());
